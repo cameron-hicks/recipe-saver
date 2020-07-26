@@ -1,0 +1,23 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  fot-size: 18pt;
+  font-style: italic;
+  color: green;
+}
+
+h2 {
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: italic;
+}
+
+h3 {
+  font-size: 12pt;
+  font-weight: bold;
+}
