@@ -1,23 +1,26 @@
-/* CSS files add styling rules to your content */
-
 body {
-  font-family: helvetica, arial, sans-serif;
-  margin: 2em;
+	font-family: helvetica, arial, sans-serif;
+	margin: 2em;
+	/* put a bakcground behind the recipe cards
+  background-image: url("STRING HERE");
+	background-position: center;
+  background-repeat: repeat;
+ */
 }
 
 h1 {
-  fot-size: 18pt;
-  font-style: italic;
-  color: green;
+	font-size: 18pt;
+	font-style: italic;
+	color: green;
 }
 
 h2 {
-  font-size: 10pt;
-  font-weight: normal;
-  font-style: italic;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: italic;
 }
 
 h3 {
-  font-size: 12pt;
-  font-weight: bold;
+	font-size: 12pt;
+	font-weight: bold;
 }

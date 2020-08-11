@@ -1,3 +1,5 @@
+<!-- the main page, where the user can type up a new recipe card to add to their collection -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,67 +7,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Black Bean Nachos Recipe</title>
+    <title>Recipe Saver</title>
+  </head>  
+  <body>
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <style>
+
+    body {
+      font-family: helvetica, arial, sans-serif;
+      margin: 2em;
+      background-color: rgba(0, 128, 0, 0.3);
+    }
+
+    .wrap {
+      filter: drop-shadow(0 0 6px rgba(0, 128, 0, 0.4));
+    }
+
+    .leftColumn {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      background-color:rgb(255, 241, 219);
+      border:rgb(255, 241, 219) 5px;
+      padding: 20px;
+      position: relative;
+      margin: auto;
+      max-width: 410px;
+      overflow: hidden;
+      clip-path: polygon(0 0, 0 0, 85% 0, 100% 5%, 100% 100%, 100% 100%, 0% 100%, 0% 90%, 0% 100%);
+    }
+
+    .leftColumn:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 67px;
+    height: 56px;
+    background-color:rgb(253, 228, 185);
+    top: 0;
+    right: 0;
+}
+
+    .sidebar {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      position: relative;
+      margin: auto;
+      padding: 20px;
+      max-width: 410px;
+      background-color:rgb(255, 241, 219);
+      border:rgb(255, 241, 219) 5px;
+      filter: drop-shadow(0 0 6px rgba(0, 128, 0, 0.4));
+    }
+
+    input {
+      width: 400px;
+    }
+
+    textarea {
+      width: 400px;
+      height: 400px;
+    }
     
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
+    h1 {
+      font-family: "Playfair Display", Georgia, Times, serif;
+      font-size: 18pt;
+      font-style: italic;
+      color: green;
+      text-decoration: underline overline double green;
+      text-underline-position: under;
+    }
+
+    h2 {
+      font-size: 12pt;
+      font-weight: bold;
+    }
+    
+    h3 {
+      font-size: 10pt;
+      font-weight: normal;
+      font-style: italic;
+    }
+    </style>
     
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
-  </head>  
-  <body>
-    <h1>Black Bean Nachos</h1>
     
-    <p>
-     <h2>
-      Serves 2 as an entree or 4 as an appetizer. Takes 20 mins. Vegetarian.
-    </h2>
-    </p>
-    <h3>
-      Ingredients
-    </h3>
-    <ul>
-      <li>tortilla chips</li>
-      <li>2 c. shredded cheese (any Mexican blend), divided</li>
-      <li>1 tsp butter</li>
-      <li>a few tablespoons milk</li>
-      <li>1, 14-oz can black beans, rinsed and drained</li>
-      <li>1 Tb olive oil</li>
-      <li>black pepper, to taste</li>
-      <li>hot sauce, to taste</li>
-      <li>1/4 red onion, diced</li>
-      <li>1 small tomato, diced</li>
-      <li>1/2 red bell pepper, diced</li>
-      <li>pickled jalapenos, to taste (or any other hot pepper)</li>
-      <li>1/4-1/2 c. salsa verde</li>
-      <li>2 scallions, chopped</li>
-      <li>fresh cilantro, chopped, to taste</li>
-    </ul>
-    <h3>
-      Instructions
-    </h3>
-    <p>
-      Preheat your oven to 400 degrees and grease a medium-sized baking sheet with olive oil.
-    </p>
-    <p>
-      <!-- italics --> Make the cheese sauce: Melt the butter in a small saucepan. Add 1.5 cups of the cheese and a couple glugs of milk, just enough to barely cover the cheese. Melt, stirring, over the lowest possible heat until smooth and just barely thin enough to pour. Add more milk, one glug at a time, if the cheese is too thick. Season with black pepper and a few dashes of your favorite hot sauce. (We're currently obsessed with one called -- aptly! -- Zombie Apocalypse.)
-    </p>
-    <p>
-      Meanwhile, toss the black beans in a little olive oil in a nonstick pan over medium heat. Toast, stirring frequently, for about 5 mins, until the beans burst open and their texture is fluffy and a little crispy.
-    </p>
-    <p>
-      Meanwhile, dice and chop all your vegetables.
-    </p>
-    <p>
-      <!-- italics --> Assemble the nachos: Lay down a single layer of tortilla chips in the greased baking sheet. Drizzle about 1/3 of the cheese sauce overtop, and toss on a few handfuls of benas. Then heap another layer of tortilla chips on top and generously pour the rest of the cheese sauce. Pile high with the rest of the beans as well as the tomatoes, onions, and sweet and hot peppers. Sprinkle the remaining 1/2 cup of shredded cheese overtop.
-    </p>
-    <p>
-      Bake the nachos for 8-10 mins, until the cheese on top is melted and just beginning to brown. Dot with several spoonfuls of salsa verde. Garnish with the scallions and cilantro and serve.
-    </p>
+    <div class="wrap">
+    <div class="leftColumn">
 
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js" defer></script>
+    <h1>Make a Recipe Card</h1>
+
+    <h3>Title: </h3>
+    <input id="title"></input>
+    <!-- format to show the text "Recipe Title" until you click on it and type in your own recipe title -->
+
+    <h3>Ingredients:</h3>
+    <textarea id="ingredients"></textarea>
+    <!-- format the textarea similarly to the textarea I used on Quick Text Clone, but show text "Enter Ingredients Here" or something until you click on it and type in your own recipe-->
+
+    <h3>Instructions:</h3>
+    <textarea id="instructions"></textarea>
+    <!-- format the textarea similarly to the textarea I used on Quick Text Clone, but show text "Enter Recipe Here" or something until you click on it and type in your own recipe-->
+  </div>
+  </div>
+
+  <!-- Submit or Save button here -->
+
+<p style= "position: relative;
+margin: auto;
+padding: 20px;
+max-width: 410px;""> blank space baby </p>
+
+   <!-- Print out what was entered above, but maybe formatted. 
+    To-do: Align it to the right of the input entry forms. CSS flex column? -->
+
+  <div class="sidebar">
+   <h2>My Recipes </h2>
+  </div>
+
   </body>
 </html>
