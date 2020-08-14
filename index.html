@@ -11,120 +11,66 @@
   </head>  
   <body>
     <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
-    <style>
-
-    body {
-      font-family: helvetica, arial, sans-serif;
-      margin: 2em;
-      background-color: rgba(0, 128, 0, 0.3);
-    }
-
-    .wrap {
-      filter: drop-shadow(0 0 6px rgba(0, 128, 0, 0.4));
-    }
-
-    .leftColumn {
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: column;
-      background-color:rgb(255, 241, 219);
-      border:rgb(255, 241, 219) 5px;
-      padding: 20px;
-      position: relative;
-      margin: auto;
-      max-width: 410px;
-      overflow: hidden;
-      clip-path: polygon(0 0, 0 0, 85% 0, 100% 5%, 100% 100%, 100% 100%, 0% 100%, 0% 90%, 0% 100%);
-    }
-
-    .leftColumn:after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 67px;
-    height: 56px;
-    background-color:rgb(253, 228, 185);
-    top: 0;
-    right: 0;
-}
-
-    .sidebar {
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: column;
-      position: relative;
-      margin: auto;
-      padding: 20px;
-      max-width: 410px;
-      background-color:rgb(255, 241, 219);
-      border:rgb(255, 241, 219) 5px;
-      filter: drop-shadow(0 0 6px rgba(0, 128, 0, 0.4));
-    }
-
-    input {
-      width: 400px;
-    }
-
-    textarea {
-      width: 400px;
-      height: 400px;
-    }
-    
-    h1 {
-      font-family: "Playfair Display", Georgia, Times, serif;
-      font-size: 18pt;
-      font-style: italic;
-      color: green;
-      text-decoration: underline overline double green;
-      text-underline-position: under;
-    }
-
-    h2 {
-      font-size: 12pt;
-      font-weight: bold;
-    }
-    
-    h3 {
-      font-size: 10pt;
-      font-weight: normal;
-      font-style: italic;
-    }
-    </style>
-    
-    <!-- import the webpage's javascript file -->
+    <link href='/style.css' rel='stylesheet'>
     <script src="/script.js" defer></script>
     
     <div class="wrap">
-    <div class="leftColumn">
+    <div class="main">
 
-    <h1>Make a Recipe Card</h1>
+    <p id="pageTitle">Make a Recipe Card</h1>
+ 
+    <!-- for now, prints the submitted data to a new tab or window. I chose method=post instead of method=get to be able to send more than 2048 characters and so the data would be printed in the url -->
+    <form action="/script.js" target="_blank" method="post">
 
-    <h3>Title: </h3>
-    <input id="title"></input>
-    <!-- format to show the text "Recipe Title" until you click on it and type in your own recipe title -->
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title"></input>
+    <p>
+    <div class="row">
+      <div>
+      <input type="checkbox" id="vegetarian" name="vegetarian">
+      <label for="vegetarian">Vegetarian</label></div>
+      <div>
+      <input type="checkbox" id="spicy" name="vegetarian">
+      <label for="spicy">Spicy</label></div>
+      <div>
+      <input type="checkbox" id="healthy" name="healthy">
+      <label for="healthy">Healthy</label></div>
+      <div>
+      <input type="checkbox" id="weeknight" name="weeknight">
+      <label for="weeknight">Weeknight</label></div>
+    </div>
 
-    <h3>Ingredients:</h3>
-    <textarea id="ingredients"></textarea>
-    <!-- format the textarea similarly to the textarea I used on Quick Text Clone, but show text "Enter Ingredients Here" or something until you click on it and type in your own recipe-->
-
-    <h3>Instructions:</h3>
-    <textarea id="instructions"></textarea>
-    <!-- format the textarea similarly to the textarea I used on Quick Text Clone, but show text "Enter Recipe Here" or something until you click on it and type in your own recipe-->
+    <p>
+      
+    <div class="row">
+    <div>
+    <label for="servings">Servings:</label>
+    <input type="text" id="servings" name="servings"></input></div>
+    <div>
+    <label for="time" style="margin-left: 10px;">Time:</label>
+    <input type="text" id="time" name="time"></input></div>
+    </div>
+    <p>
+    <label for="ingredients">Ingredients:</label>
+    <textarea id="ingredients" name="ingredients"></textarea>
+    <!-- make input in bullet points by default -->
+    <p>
+    <label for="instructions">Instructions:</label>
+    <textarea id="instructions" name="instructions"></textarea>
+    <p>
+    
+   <div class="buttons">
+    <button type="reset">Reset</button>
+    <button type="submit" name="submit" value="Submit">Save Recipe Card</button>
+   </div>
+    </form>
   </div>
   </div>
 
-  <!-- Submit or Save button here -->
-
-<p style= "position: relative;
-margin: auto;
-padding: 20px;
-max-width: 410px;""> blank space baby </p>
-
-   <!-- Print out what was entered above, but maybe formatted. 
-    To-do: Align it to the right of the input entry forms. CSS flex column? -->
+<p style= "margin: 20px;"> </p>
 
   <div class="sidebar">
-   <h2>My Recipes </h2>
+   <h1>My Recipes </h2>
   </div>
 
   </body>

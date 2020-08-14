@@ -9,20 +9,20 @@ const recipe = {
 
 console.log(recipe);
 
-title.addEventListener("keyup", (event) => {
-    //console.log(event.currentTarget);
-    //console.log(title.value);
-    localStorage.setItem("title", title.value);
-    localStorage.setItem("instructions", instructions.value);
-    });
+// title.addEventListener("keyup", (event) => {
+//     //console.log(event.currentTarget);
+//     //console.log(title.value);
+//     localStorage.setItem("title", title.value);
+//     localStorage.setItem("instructions", instructions.value);
+//     });
 
-    function makeRecipeObject() {
-        return {
-            title = document.getElement("title"), //is it okay that the property and the variable have the same name?
-            ingredients = document.getElement("ingredients"),
-            instructions = document.getElement("instructions")
-        };
-    }
+function makeRecipeObject() {
+    return {
+        title = document.getElement("title"), //is it okay that the property and the variable have the same name?
+        ingredients = document.getElement("ingredients"),
+        instructions = document.getElement("instructions")
+    };
+}
 
 function readLastRecipe() {
     localStorage.setItemById("readTitle", recipe.title);
