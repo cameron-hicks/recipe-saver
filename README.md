@@ -2,6 +2,10 @@
 
 Recipe Saver is an app I'm building to practice HTML, CSS, and JavaScript as I learn to code. It allows the user to make a Recipe Card, which is stored as an object with properties reflecting the title, ingredients, and instructions of their recipe as well as some booleans about whether it is healthy, spicy, quick to make, etc. A sidebar shows a list of the titles of the recipes the user has saved previously; they can click on a title to get the corresponding Recipe Card. 
 
+## View App
+
+[Continuous deployment on Netlify](https://compassionate-jennings-1c606a.netlify.app/) 
+
 ## Planned Features
 
 Drawing inspiration from Allrecipes.com, ideas for future functionality in Recipe Saver include:
