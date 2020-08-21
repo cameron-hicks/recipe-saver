@@ -1,37 +1,19 @@
-Welcome to Glitch
-=================
+# Recipe Saver
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+Recipe Saver is an app to practice the HTML, CSS, and JavaScript I'm learning. It allows the user to make a Recipe Card, which is stored as an object with properties reflecting the title, ingredients, and instructions of their recipe as well as some booleans about whether it is healthy, spicy, quick to make, etc. In a sidebar, the user will see a list of the titles of the recipes they have saved, which they can click on to get the corresponding Recipe Card. 
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+## Planned Features
 
-Find out more [about Glitch](https://glitch.com/about).
+Ideas for future functionality include:
 
+- send a scheduled, recurring newsletter to subscribers containing three randomly selected Recipe Cards; 
 
-Your Project
-------------
+- store Recipe Cards in a database; 
 
-### â README.md
+- make Recipe Cards from recipes pulled from the database of someone else's food blog; 
 
-That's this file, where you can tell people what your cool website does and how you built it.
+- add user accounts; 
 
-### â index.html
+- user ability to browse Recipe Cards and save Cards to their personal Recipe Folder; 
 
-Where you'll write the content of your website. 
-
-### â style.css
-
-CSS files add styling rules to your content.
-
-### â script.js
-
-If you're feeling fancy you can add interactivity to your site with JavaScript.
-
-### â assets
-
-Drag in `assets`, like images or music, to add them to your project
-
-Made by [Glitch](https://glitch.com/)
--------------------
-
-\ ãoã)ã
+- chat forum.
