@@ -11,21 +11,22 @@
   </head>  
   <body>
     <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
-    <link href='/style.css' rel='stylesheet'>
+    <link href="/style.css" rel="stylesheet">
     <script src="/script.js" defer></script>
     
     <div class="wrap">
-    <div class="main">
+    <div class="main"> 
 
     <p id="pageTitle">Make a Recipe Card</h1>
  
-    <!-- for now, prints the submitted data to a new tab or window. I chose method=post instead of method=get to be able to send more than 2048 characters and so the data would be printed in the url -->
-    <form action="/script.js" target="_blank" method="post">
+    <form>
+        <!--  action="/script.js" target="_blank" method="post" would print the submitted data to a new tab or window. I chose method=post instead of method=get to be able to send more than 2048 characters and so the data would be printed in the url. not currently using in form element because of bugs -->
 
     <label for="title">Title:</label>
     <input type="text" id="title" name="title"></input>
     <p>
-    <div class="row">
+    
+      <div class="row">
       <div>
       <input type="checkbox" id="vegetarian" name="vegetarian">
       <label for="vegetarian">Vegetarian</label></div>
@@ -60,8 +61,8 @@
     <p>
     
    <div class="buttons">
-    <button type="reset">Reset</button>
-    <button type="submit" name="submit" value="Submit">Save Recipe Card</button>
+    <button type="reset" id="reset">Reset</button>
+    <button type="submit" id="submit" name="submit" value="Submit">Save Recipe Card</button>
    </div>
     </form>
   </div>

@@ -9,11 +9,12 @@ body {
   }
 
 .main {
-	/*display: flex;
+	/*display: flex; --> this needs to be in the parent div
 	justify-content: flex-start;
 	flex-direction: column;*/
 	background-color:rgb(255, 241, 219);
 	/*border:rgb(255, 241, 219) 5px;*/
+	margin: auto;
 	padding: 20px;
 	position: relative;
 	width: 410px;
@@ -32,9 +33,9 @@ body {
   right: 0;
 }
 
-.checkboxes {
-	/* troubleshoot: showing in columns instead of rows */
+.row {
 	display: flex;
+	flex-direction:row;
 	justify-content: space-between;
 }
 
@@ -63,42 +64,50 @@ body {
 }  
 
 #title {
-	position: relative;
+	
 	width: 400px;
   }
 
 #servings {
-	position: relative;
+	
 	width: 40px;
 } 
 
 #time {
-	position: relative;
+
 	width: 220px;
 }
   
 #ingredients, #instructions {
-	position: relative;
 	width: 400px;
 	height: 400px;
   }
 
 .buttons {
-	/* troubleshoot: showing in columns instead of rows; this formatting is not showing up on the buttons since I added a reset button. */
+	height: 75px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
+  } 
+
+  #submit, #reset  {
 	font-family: helvetica, arial, sans-serif;
 	font-size: 12pt;
-	background-color: rgba(0, 128, 0, 0.4);
 	padding: 10px;
-	position: absolute; /* troubleshoot: when this property is set to absolute, the button disappears. */
-	right: 0;
 	margin-top: 20px;
-	width: 175px;
+	margin-left: 8px;
+	width: auto;
+	height: 40px;
 	text-align: center;
+  }
+
+  #submit {
+	background-color: rgba(0, 128, 0, 0.4);
 	border: outset rgba(0, 128, 0, 0.5) 2px;
-	/*filter: drop-shadow(0 0 6px rgb(253, 228, 185));*/
-	/*display: inline-block;*/
+  }
+
+  #reset {
+	background-color: rgb(253, 228, 185);
+	border: outset rgb(253, 228, 185) 2px;
   }
 
   h1 {
