@@ -1,10 +1,10 @@
-#Recipe Saver
+# Recipe Saver
 
 Recipe Saver is an app to practice the HTML, CSS, and JavaScript I'm learning. It allows the user to make a Recipe Card, which is stored as an object with properties reflecting the title, ingredients, and instructions of their recipe as well as some booleans about whether it is healthy, spicy, quick to make, etc. In a sidebar, the user will see a list of the titles of the recipes they have saved, which they can click on to get the corresponding Recipe Card. 
 
 ---
 
-##Planned Features
+## Planned Features
 
 Ideas for future functionality include:
 
