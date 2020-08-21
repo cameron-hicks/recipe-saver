@@ -1,22 +1,26 @@
 body {
 	font-family: helvetica, arial, sans-serif;
-	margin: 2em;
 	background-color: rgba(0, 128, 0, 0.3);
   }
 
-.wrap {
+.wrapEverything {
+	display: flex;
+	justify-content: space-around; /* expected behavior: position both main and sidebar divs in center of window with space around them */
+	align-items: flex-start; /* expected behavior: position both divs at top of window */
+	width: 750px;
+	margin: auto;
+}
+
+.wrapMain {
 	filter: drop-shadow(0 0 6px rgba(0, 128, 0, 0.4));
   }
 
 .main {
-	/*display: flex; --> this needs to be in the parent div
-	justify-content: flex-start;
-	flex-direction: column;*/
 	background-color:rgb(255, 241, 219);
-	/*border:rgb(255, 241, 219) 5px;*/
-	margin: auto;
+	border:rgb(255, 241, 219) 5px;
 	padding: 20px;
-	position: relative;
+	margin: auto;
+	/*position: relative;*/
 	width: 410px;
 	overflow: hidden;
 	clip-path: polygon(0 0, 0 0, 85% 0, 100% 5%, 100% 100%, 100% 100%, 0% 100%, 0% 90%, 0% 100%);
@@ -26,8 +30,8 @@ body {
   content: '';
   position: absolute;
   display: block;
-  width: 67px;
-  height: 56px;
+  width: 15%;
+  height: 5%;
   background-color:rgb(253, 228, 185);
   top: 0;
   right: 0;
@@ -35,21 +39,15 @@ body {
 
 .row {
 	display: flex;
-	flex-direction:row;
 	justify-content: space-between;
 }
 
 .sidebar {
-	/* display: flex;
-	justify-content: flex-end;
-	flex-direction: column; */
-	position: sticky; /* this isn't working yet. */
-	top: 0;
-	margin: auto;
+	margin-top: 50px;
 	padding: 20px;
-	max-width: 410px;
+	width: 300px;
 	background-color:rgb(255, 241, 219);
-	/*border:rgb(255, 241, 219) 5px;*/
+	border:rgb(255, 241, 219) 5px;
 	filter: drop-shadow(0 0 6px rgba(0, 128, 0, 0.4));
   }
 
@@ -60,16 +58,14 @@ body {
 	color: green;
 	text-decoration: underline overline double green;
 	text-underline-position: under;
-	position: relative;
+	
 }  
 
 #title {
-	
 	width: 400px;
   }
 
 #servings {
-	
 	width: 40px;
 } 
 
@@ -131,4 +127,12 @@ h3 {
 
 label {
 	font-family: helvetica, arial, sans-serif;
+}
+
+hr {
+	border: dotted green;
+}
+
+a {
+	/* to-do: style links. Font=body font, color=body color, no underline. */
 }
