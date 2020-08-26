@@ -24,8 +24,9 @@
     <form>
         <!--  action="/script.js" target="_blank" method="post" would print the submitted data to a new tab or window. I prefer method=post instead of method=get to be able to send more than 2048 characters and so the data would be printed in the url. not currently using any action or target in form element because of errors -->
 
-    <label for="title">Title:</label>
-    <input type="text" id="title" name="title"></input>
+        <!--TO-DO: Style title input. Big text size -->
+    <!-- <label for="title">Title:</label> -->
+    <input type="text" id="title" name="title" placeholder="Title"></input>
     <p>
     
       <div class="row">
@@ -54,12 +55,14 @@
     <input type="text" id="time" name="time"></input></div>
     </div>
     <p>
-    <label for="ingredients">Ingredients:</label>
-    <textarea id="ingredients" name="ingredients"></textarea>
-    <!-- make input in bullet points by default -->
+
+      <!-- TO-DO: Style ingredients and instructions textareas. Font family -->
+    <!-- <label for="ingredients">Ingredients:</label> -->
+    <textarea id="ingredients" name="ingredients" placeholder="Ingredients"></textarea>
+    <!-- TO-DO: make input show in bullet points by default -->
     <p>
-    <label for="instructions">Instructions:</label>
-    <textarea id="instructions" name="instructions"></textarea>
+    <!-- <label for="instructions">Instructions:</label> -->
+    <textarea id="instructions" name="instructions" placeholder="Instructions"></textarea>
     <p>
     
    <div class="buttons">

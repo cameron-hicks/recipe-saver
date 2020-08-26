@@ -5,8 +5,8 @@ body {
 
 .wrapEverything {
 	display: flex;
-	justify-content: space-around; /* expected behavior: position both main and sidebar divs in center of window with space around them */
-	align-items: flex-start; /* expected behavior: position both divs at top of window */
+	justify-content: space-around;
+	align-items: flex-start;
 	width: 750px;
 	margin: auto;
 }
@@ -85,7 +85,7 @@ body {
 	justify-content: flex-end;
   } 
 
-  #submit, #reset  {
+#submit, #reset  {
 	font-family: helvetica, arial, sans-serif;
 	font-size: 12pt;
 	padding: 10px;
@@ -94,11 +94,11 @@ body {
 	width: auto;
 	height: 40px;
 	text-align: center;
-  }
+}
 
   #submit {
 	background-color: rgba(0, 128, 0, 0.4);
-	border: outset rgba(0, 128, 0, 0.5) 2px;
+	border: outset rgba(0, 128, 0, 0.4) 2px;
   }
 
   #reset {
