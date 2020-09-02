@@ -21,14 +21,15 @@
 
     <p id="pageTitle">Make a Recipe Card</h1>
  
-    <form>
-        <!--  action="/script.js" target="_blank" method="post" would print the submitted data to a new tab or window. I prefer method=post instead of method=get to be able to send more than 2048 characters and so the data would be printed in the url. not currently using any action or target in form element because of errors -->
+    <form action="/script.js" target="/script.js" method="post">
+        <!--  action="/script.js" target="_blank" method="post" would print the submitted data to a new tab or window. not currently using any action or target in form element because of errors -->
 
         <!--TO-DO: Style title input. Big text size -->
     <!-- <label for="title">Title:</label> -->
     <input type="text" id="title" name="title" placeholder="Title"></input>
     <p>
     
+      <!-- Booleans -->
       <div class="row">
       <div>
       <input type="checkbox" id="vegetarian" name="vegetarian">
@@ -65,6 +66,8 @@
     <textarea id="instructions" name="instructions" placeholder="Instructions"></textarea>
     <p>
     
+
+  <!-- Reset and submit buttons -->
    <div class="buttons">
     <button type="reset" id="reset">Reset</button>
     <button type="submit" id="submit" name="submit" value="Submit">Save Recipe Card</button>
@@ -77,22 +80,12 @@
 
   <div class="sidebar">
    <h1>My Recipes </h2>
-    <hr>
+
     <ul>
       <li><a href="">Example Recipe 1</a></li>
       <li><a href="">Example Recipe 2</a></li>
       <li><a href="">Example Recipe 3</a></li>
-    </ul>
-    <p>-</p>
-    <p>-</p>
-    <p>-</p>
-    <p>-</p>
-    <p>-</p>
-    <p>-</p>
-    <p>-</p>
-    <p>-</p>
-    <ul>
-      <li><a href="">Example Recipe 4</a></li>
+      <li><a href="">Example Recipe n</a></li>
     </ul>
   </div>
   </div>

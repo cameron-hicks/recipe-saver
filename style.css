@@ -49,21 +49,28 @@ body {
 	background-color:rgb(255, 241, 219);
 	border:rgb(255, 241, 219) 5px;
 	filter: drop-shadow(0 0 6px rgba(0, 128, 0, 0.4));
-  }
+}
+
+/* hr {
+	border: solid 2px green;
+} */
+
+a {
+	/* to-do: style links. Font=body font, color=body color, no underline. */
+}
 
 #pageTitle {
 	font-family: "Playfair Display", Georgia, Times, serif;
 	font-size: 18pt;
-	font-style: italic;
 	color: green;
-	text-decoration: underline overline double green;
+	text-decoration: underline double green;
 	text-underline-position: under;
 	
 }  
 
 #title {
 	width: 400px;
-  }
+}
 
 #servings {
 	width: 40px;
@@ -96,43 +103,38 @@ body {
 	text-align: center;
 }
 
-  #submit {
+#submit {
 	background-color: rgba(0, 128, 0, 0.4);
 	border: outset rgba(0, 128, 0, 0.4) 2px;
-  }
+}
 
-  #reset {
+#reset {
 	background-color: rgb(253, 228, 185);
 	border: outset rgb(253, 228, 185) 2px;
-  }
+}
 
-  h1 {
+h1 {
 	font-family: "Playfair Display", Georgia, Times, serif;
 	font-size: 14pt;
+	font-style: normal;
 	color: green;
-  }
+	text-decoration: underline double green;
+	text-underline-position: under;
+}
 
 h2 {
 	font-family: helvetica, arial, sans-serif;
 	font-size: 12pt;
 	font-weight: bold;
-  }
+}
   
 h3 {
 	font-family: helvetica, arial, sans-serif;
 	font-size: 10pt;
 	font-weight: normal;
 	font-style: italic;
-  }
+}
 
 label {
 	font-family: helvetica, arial, sans-serif;
-}
-
-hr {
-	border: dotted green;
-}
-
-a {
-	/* to-do: style links. Font=body font, color=body color, no underline. */
 }
