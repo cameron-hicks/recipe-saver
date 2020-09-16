@@ -1,3 +1,5 @@
+//TO-DO: make manual save() and load() functions. Instead of adding event listeners and getting and setting items in local storage with one line of code and a loop that iterates through an array holding all of the form elements, I'll need to handle each form element individually, since the checkboxes are booleans and need to be handled in a different way from the string inputs. Scroll towards end of file for some work I've already done towards this refactoring. https://stackoverflow.com/questions/26628812/localstorage-how-to-save-a-checkbox
+
 // Add event listeners so that on keyup the user's progress in each form element will be saved in local storage.
 /*
 const title = document.getElementById("title");
@@ -24,13 +26,20 @@ console.log(formElements);
 
 // Iterate through the array of the form elements, getting each element's value from local storage and populating the html form with these values so that if the user navigates away from teh page, when they return the page holds their progress.
 formElements.forEach(elem => {
-    // throws error: Cannot set property 'value' of null
+    // throws error: Cannot set property 'value' of null. Possible clue: I have mixed booleans and strings.
     document.getElementById(`{elem}`).value = localStorage.getItem(`{elem}`);
 });
 
 // Make an event listener creator function that can invoke addEventListener on any form element you pass it. Takes one parameter, form element. (though i could also write it with an event type parameter if I wanted to use the same listener creator function for submit button functionality.)
-// PROBLEM: Isn't working properly for my booleans -- nothing logs for them. Is it because the keyup event doesn't apply to them?
+// PROBLEM: Isn't working properly for my booleans -- nothing logs for them. Is it because the keyup event doesn't apply to them? 
 function listenerCreator(elem){
+    
+    //TODO: Look up documentation for typeof. What is the proper syntax to use it? 
+    if (elem typeof === Boolean) {
+        //TODO: Look up documentation for JSON.stringify(). Does it return a string? Or does it change the variable it's called on into a string? If it returns a string, I will need to declare a variable, say elemToPass, and assign that variable to the return result of stringify().
+        JSON.stringify(elem);
+    }
+
     elem.addEventListener("keyup", event => {
         localStorage.setItem(`${elem}`, elem.value);
         console.log(`Event listener created for ${elem}.`);
@@ -39,7 +48,7 @@ function listenerCreator(elem){
 }
 
 // Iterate through an array of the form elements, invoking the event listener creator on each one to set each's value in local storage.
-formElements.forEach(elem => {listenerCreator(elem)});
+formElements.forEach(elem => listenerCreator(elem));
 
 // Turn form input into recipe objects that can be saved in local storage under the title of the recipe. 
 const protoRecipe = {
@@ -59,7 +68,37 @@ const protoRecipe = {
 // saveRecipe(protoRecipe);
 // console.log(window.localStorage.getItem(protoRecipe.title));
 
-//Optional TO-DO: Replace this strategy for creating an object with one of the more scaleable approaches I learned in JS The Hard Parts.
+//Optional TO-DO below: Replace this strategy for creating an object with one of the more scaleable approaches I learned in JS The Hard Parts, eg making a class.
+
+class Recipe{
+    constructor(){
+       //default values for each property
+        this.title = "", //string
+        this.vegetarian = false, //boolean
+        this.spicy = false, //boolean
+        this.healthy = false, //boolean
+        this.weeknight = false, //boolean
+        this.servings = "", //string
+        this.time = "", //string
+        this.ingredients = ``, //string
+        this.instructions = `` //string
+    }
+    save(){
+        //Save the instance to localStorage.
+    }
+    load() {
+        //Get the instance from localStorage.
+    }
+    download(){
+        //Download the instance as an HTML file.
+    }
+    print(){
+        //Print the instance as an HTML file.
+    }
+}
+
+// BELOW: Making recipe objects with functions instead of a class.
+
 // TO-DO: Try using the array formElements to initialize the object.
 function recipeCreator() {
     const recipe = Object.create(protoRecipe);
@@ -83,7 +122,7 @@ function saveRecipe(recipeObj){
 
 // Loads the recipe stored in local storage to all the input fields on the html form
 function showLocalStorage(title) {
-    const storageContents = window.localStorage.getItem(title);
+    const storageContents = localStorage.getItem(title);
     return storageContents;
 }
 
@@ -95,52 +134,3 @@ function showLocalStorage(title) {
 
 /* Question:
 Since I'm already saving the inputs in local storage, when the user clicks "Submit" button, instead of making an object from what's been entered into the input elements, can I make an object from what's been saved in local storage? What are the pros and cons of each strategy? */
-
-
-
-// Previous work I did:
-
-/*
-//Get a recipe object from local storage and save in a variable named recipeSoFar.
-const recipeSoFar = localStorage.getItem("recipeSoFar");
-//Assign all the form elements' values to the values saved in recipeSoFar.
-title.value = recipeSoFar.title;
-*/
-
-/*
-title.addEventListener("keyup", (event) => {
-    //console.log(event.currentTarget);
-    //console.log(title.value);
-    localStorage.setItem("title", title.value);
-    localStorage.setItem("instructions", instructions.value);
-    });
-function readLastRecipe() {
-    
-}
-
-readRecentRecipe();
-console.log(recipe);
-recipe = recipeCreator();
-console.log(recipe);
-
-function storeRecipeInLocalStorage(recipe) {
-	//takes a recipe object
-	//stores it in local storage
-	console.log(recipe);
-}
-
-storeRecipeInLocalStorage(recipe);
-console.log(recipe);
-
-function readRecipeFromLocalStorage(title) {
-	//prints out in html the recipe object saved in local storage with the corresponding title
-	//get the recipe object with the passed title: localStorage.getItem(....).... 
-	localStorage.setItemById("readTitle", recipe.title);
-	localStorage.setItemById("readInstructions", recipe.instructions);
-}
-
-readRecipeFromLocalStorage("Black Bean Nachos");
-
-const input = document.getElementById("input");
-input.value = localStorage.getItem("Saved Text");
-*/
