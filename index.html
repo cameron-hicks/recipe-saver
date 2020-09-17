@@ -21,7 +21,7 @@
 
     <p id="pageTitle">Make a Recipe Card</h1>
  
-    <form action="/script.js" target="/script.js" method="post">
+    <form>
         <!--  action="/script.js" target="_blank" method="post" would print the submitted data to a new tab or window. not currently using any action or target in form element because of errors -->
 
         <!--TO-DO: Style title input. Big text size -->
@@ -29,19 +29,19 @@
     <input type="text" id="title" name="title" placeholder="Title" required></input>
     <p>
     
-      <!-- Booleans -->
+      <!-- These were booleans before. Now, by adding value="[some string]", they are made also strings like the rest of the form elements. -->
       <div class="row">
       <div>
-      <input type="checkbox" id="vegetarian" name="vegetarian">
+      <input type="checkbox" id="vegetarian" name="vegetarian" value="vegetarian">
       <label for="vegetarian">Vegetarian</label></div>
       <div>
-      <input type="checkbox" id="spicy" name="vegetarian">
+      <input type="checkbox" id="spicy" name="spicy" value="spicy">
       <label for="spicy">Spicy</label></div>
       <div>
-      <input type="checkbox" id="healthy" name="healthy">
+      <input type="checkbox" id="healthy" name="healthy" value="healthy">
       <label for="healthy">Healthy</label></div>
       <div>
-      <input type="checkbox" id="weeknight" name="weeknight">
+      <input type="checkbox" id="weeknight" name="weeknight" value="weeknight">
       <label for="weeknight">Weeknight</label></div>
     </div>
 

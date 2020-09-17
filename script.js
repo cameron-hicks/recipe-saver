@@ -34,11 +34,13 @@ formElements.forEach(elem => {
 // PROBLEM: Isn't working properly for my booleans -- nothing logs for them. Is it because the keyup event doesn't apply to them? 
 function listenerCreator(elem){
     
+    /*
     //TODO: Look up documentation for typeof. What is the proper syntax to use it? 
     if (elem typeof === Boolean) {
         //TODO: Look up documentation for JSON.stringify(). Does it return a string? Or does it change the variable it's called on into a string? If it returns a string, I will need to declare a variable, say elemToPass, and assign that variable to the return result of stringify().
         JSON.stringify(elem);
     }
+    */
 
     elem.addEventListener("keyup", event => {
         localStorage.setItem(`${elem}`, elem.value);
