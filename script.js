@@ -32,6 +32,8 @@ submitButton.addEventListener("click", event => {
     // debugger
     // When you need to access this object again, you can do so by referencing its title property with dot notation.
     localStorage.setItem(`${inputtedValues.title}`, JSON.stringify(inputtedValues));
+
+    location.reload();
 });
 
 // console.log(JSON.parse(localStorage.getItem("Black Bean Nachos")));
