@@ -34,5 +34,27 @@ submitButton.addEventListener("click", event => {
     localStorage.setItem(`${inputtedValues.title}`, JSON.stringify(inputtedValues));
 });
 
-console.log(JSON.parse(localStorage.getItem("Black Bean Nachos")));
+// console.log(JSON.parse(localStorage.getItem("Black Bean Nachos")));
+
+// custom function to get all recipe objects stored in the localStorage object
+function getAllStorage() {
+
+    const recipes = [];
+    const keys = Object.keys(localStorage);
+
+    keys.forEach(key => {
+        recipes.push(JSON.parse(localStorage.getItem(key)))
+    });
+
+    return recipes;
+}
+
+
+const arrayOfRecipes = getAllStorage();
+
+arrayOfRecipes.forEach(recipe => {
+    // Use JQuery to populate the <ul> element on sidebar div of index.html with the titles of all recipe objects saved in localStorage
+    console.log(recipe);
+    $("#recipeList").append(`<li><a href="#">${recipe.title}</a></li>`);
+})
 
