@@ -2,19 +2,18 @@ const submitButton = document.getElementById("submit");
 const resetButton = document.getElementById("reset");
 const arrayOfRecipes = getAllStorage();
 
-//When user clicks the submit button, save the data they've entered as an object with key-value pairs corresponding to the input elements and the values entered into them.
+//When user clicks the submit button, save the data they've entered as an object with key-value pairs corresponding to the input elements and the values entered into them. Refresh the page.
 submitButton.addEventListener("click", event => {
-    const inputtedValues = {
-        title: document.getElementById("title").value,
-        vegetarian: document.getElementById("vegetarian").value,
-        spicy: document.getElementById("spicy").value,
-        healthy: document.getElementById("healthy").value,
-        weeknight: document.getElementById("weeknight").value,
-        servings: document.getElementById("servings").value,
-        time: document.getElementById("time").value,
-        ingredients: document.getElementById("ingredients").value,
-        instructions: document.getElementById("instructions").value
-    };
+    
+    //Declare a variable to hold an array of all the ids of input elements whose values you want to use to make a recipe object.
+    const formElements = ["title," "vegetarian", "spicy", "healthy", "weeknight", "servings", "time", "ingredients", "instructions"];
+    //Declare an empty object to be populated with key-value pairs corresponding to the id of the input element and the value entered there.
+    const inputtedValues = {};
+
+    //Iterate through the array of input elements. Get the value entered in each one and add the key-value pair to the empty object.
+    formElements.forEach(elem => {
+        inputtedValues[elem] = document.getElementById(elem).value
+    });
 
     // The "debugger" statement on the line below allows you to pause the code's running in dev tools if there's an error and view what's been done so far up to the point of the error.
     // debugger
@@ -23,6 +22,7 @@ submitButton.addEventListener("click", event => {
     // localStorage.setItem(`${inputtedValues.title}`, JSON.stringify(inputtedValues));
     save(inputtedValues);
 
+    //Refresh the page.
     location.reload();
 });
 
