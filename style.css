@@ -59,7 +59,7 @@ a {
 	/* to-do: style links. Font=body font, color=body color, no underline. */
 }
 
-#pageTitle {
+.pageTitle {
 	font-family: "Playfair Display", Georgia, Times, serif;
 	font-size: 18pt;
 	color: green;

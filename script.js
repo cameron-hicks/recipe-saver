@@ -6,7 +6,7 @@ const arrayOfRecipes = getAllStorage();
 submitButton.addEventListener("click", event => {
     
     //Declare a variable to hold an array of all the ids of input elements whose values you want to use to make a recipe object.
-    const formElements = ["title," "vegetarian", "spicy", "healthy", "weeknight", "servings", "time", "ingredients", "instructions"];
+    const formElements = ["title", "vegetarian", "spicy", "healthy", "weeknight", "servings", "time", "ingredients", "instructions"];
     //Declare an empty object to be populated with key-value pairs corresponding to the id of the input element and the value entered there.
     const inputtedValues = {};
 
@@ -34,7 +34,7 @@ resetButton.addEventListener("click", event => {
 arrayOfRecipes.forEach(recipe => {
     // Use JQuery to populate the <ul> element on sidebar div of index.html with the titles of all recipe objects saved in localStorage
     console.log(recipe);
-    $("#recipeList").append(`<li><a href="#">${recipe.title}</a></li>`);
+    $("#recipeList").append(`<li><a href="/Recipe/index.html">${recipe.title}</a></li>`);
 })
 
 // custom function to save a recipe to localStorage. Accepts a recipe object. Returns nothing.
