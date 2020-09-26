@@ -1,0 +1,104 @@
+<!-- Display a recipe in STYLED <p> elements. (Not the input elements you've currently got.) Use dummy text. Just focus on displaying things nicely. Spend an hour on it. -->
+<!-- Eventually, we'll find a way to pass a recipe title to this .html page and update all the <p> elements. So, you'll need ids on all the elements. -->
+<!-- Use JQuery on this page when you're adding interactivity. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Recipe Displayer</title>
+  </head>  
+  <body>
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <link href="/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/script.js" defer></script>
+    
+    <div class="wrapEverything">
+
+    <div class="wrapMain">
+    <div class="main"> 
+
+    <p class="pageTitle" id="displayTitle"></p>
+
+    <p>  
+
+    <!-- TODO: fill the appropriate checkboxes with checkmarks. 
+    <div class="row">
+      <div>
+      <input type="checkbox" id="vegetarian" name="vegetarian" value="on">
+      <label for="vegetarian">Vegetarian</label></div>
+      <div>
+      <input type="checkbox" id="spicy" name="spicy" value="on">
+      <label for="spicy">Spicy</label></div>
+      <div>
+      <input type="checkbox" id="healthy" name="healthy">
+      <label for="healthy">Healthy</label></div>
+      <div>
+      <input type="checkbox" id="weeknight" name="weeknight" value="on">
+      <label for="weeknight">Weeknight</label></div>
+    </div>
+    -->
+
+    <p>
+
+    <p id="displayServings"></p>
+
+    <p id="displayTime"> </p>
+     
+     <!-- 
+    <div class="row">
+    <div>
+    <label for="servings">Servings:</label>
+    <input type="text" id="servings" name="servings" value="2"></input></div>
+    <div>
+    <label for="time" style="margin-left: 10px;">Time:</label>
+    <input type="text" id="time" name="time" value="20 mins"></input></div>
+    </div>
+    -->
+
+    <p>
+    </p>
+    
+    <h2>
+      Ingredients
+    </h2>
+
+    <p id="displayIngredients"> </p>
+
+    <h2>
+      Instructions
+    </h2>
+
+    <p id="displayInstructions">
+      
+    </p>
+
+    <p>
+
+  <!-- Reset and submit buttons 
+   <div class="buttons">
+    <button type="reset" id="reset">Reset</button>
+    <button id="submit" name="submit" value="Submit">Save Recipe Card</button>
+   </div>
+  -->
+    
+  </div>
+  </div>
+
+  <p style= "margin: 20px;"> </p>
+
+  <div class="sidebar">
+   <h1>My Recipes </h2>
+   
+    <ul id="recipeList">
+    </ul>
+    
+  </div>
+  </div>
+  </body>
+</html>
