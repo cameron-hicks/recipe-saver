@@ -10,7 +10,7 @@ Recipe Saver is an app I'm building to practice HTML, CSS, and JavaScript as I l
 
 Drawing inspiration from Allrecipes.com, ideas for future functionality in Recipe Saver include:
 
-- Getting a Recipe Card will open it in a new tab.
+DONE Getting a Recipe Card will open it in a new tab.
 
 - Once you get a Recipe Card, buttons in that window to: print; download; make a shopping list.
 
