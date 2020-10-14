@@ -54,9 +54,20 @@ body {
 /* hr {
 	border: solid 2px green;
 } */
-
+li {
+	line-height:1.2rem;
+}
 a {
 	/* to-do: style links. Font=body font, color=body color, no underline. */
+	color: black;
+	/* text-decoration: none; */
+}
+a:visited {
+	color: black;
+	/* text-decoration: none; */
+}
+a:hover {
+	color:green;
 }
 
 .pageTitle {

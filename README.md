@@ -4,7 +4,7 @@ Recipe Saver is an app I'm building to practice HTML, CSS, and JavaScript as I l
 
 ## View App
 
-[Continuous deployment on Netlify](https://compassionate-jennings-1c606a.netlify.app/) 
+[Continuous deployment on Netlify](https://compassionate-jennings-1c606a.netlify.app/)
 
 ## Planned Features
 
